@@ -6,15 +6,8 @@ int Solution::coverPoints(vector<int> &A, vector<int> &B) {
     }
 
     do{
-        dx = A[i] - A[i+1];
-        dy = B[i] - B[i+1];
-
-        if(dx < 0){
-            dx = -dx;
-        }
-        if(dy < 0){
-            dy = -dy;
-        }
+        dx = abs(A[i] - A[i+1]);
+        dy = abs(B[i] - B[i+1]);
 
         while( dx != 0 && dy != 0 ){
             dx--;
